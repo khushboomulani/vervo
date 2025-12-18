@@ -1,0 +1,188 @@
+/* ===== Custom Responsive Columns (Fixed Row Width Issue) ===== */
+
+/* Basic Reset for Rows and Columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  box-sizing: border-box;
+}
+
+[class*="col-"] {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  box-sizing: border-box;
+}
+
+/* Extra small (<576px or <760px height) */
+@media (max-width: 575.98px), (max-height: 760px) {
+  .col-xs-1 { flex: 0 0 8.3333%; max-width: 8.3333%; }
+  .col-xs-2 { flex: 0 0 16.6666%; max-width: 16.6666%; }
+  .col-xs-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-xs-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+  .col-xs-5 { flex: 0 0 41.6666%; max-width: 41.6666%; }
+  .col-xs-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-xs-7 { flex: 0 0 58.3333%; max-width: 58.3333%; }
+  .col-xs-8 { flex: 0 0 66.6666%; max-width: 66.6666%; }
+  .col-xs-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-xs-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
+  .col-xs-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
+  .col-xs-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Small (≥576px and <768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .col-sm-1 { flex: 0 0 8.3333%; max-width: 8.3333%; }
+  .col-sm-2 { flex: 0 0 16.6666%; max-width: 16.6666%; }
+  .col-sm-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-sm-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+  .col-sm-5 { flex: 0 0 41.6666%; max-width: 41.6666%; }
+  .col-sm-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-sm-7 { flex: 0 0 58.3333%; max-width: 58.3333%; }
+  .col-sm-8 { flex: 0 0 66.6666%; max-width: 66.6666%; }
+  .col-sm-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-sm-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
+  .col-sm-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
+  .col-sm-12 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Medium (≥768px) */
+@media (min-width: 768px) {
+  .col-md-1 { flex: 0 0 8.3333%; max-width: 8.3333%; }
+  .col-md-2 { flex: 0 0 16.6666%; max-width: 16.6666%; }
+  .col-md-3 { flex: 0 0 25%; max-width: 25%; }
+  .col-md-4 { flex: 0 0 33.3333%; max-width: 33.3333%; }
+  .col-md-5 { flex: 0 0 41.6666%; max-width: 41.6666%; }
+  .col-md-6 { flex: 0 0 50%; max-width: 50%; }
+  .col-md-7 { flex: 0 0 58.3333%; max-width: 58.3333%; }
+  .col-md-8 { flex: 0 0 66.6666%; max-width: 66.6666%; }
+  .col-md-9 { flex: 0 0 75%; max-width: 75%; }
+  .col-md-10 { flex: 0 0 83.3333%; max-width: 83.3333%; }
+  .col-md-11 { flex: 0 0 91.6666%; max-width: 91.6666%; }
+  .col-md-12 { flex: 0 0 100%; max-width: 100%; }
+}
+/* for custom card */
+@media (max-width: 768px) {
+.card h6{font-size: .8rem;}
+.card h5{font-size: .8rem;}
+tbody, td, tfoot, th, thead, tr{font-size: 12px;}
+}
+
+table th{font-size: 14px;}
+/* REMOVE old .toggle + label + .submenu CSS */
+
+.submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+  display: block;       /* <-- Must stay visible */
+}
+
+.dropdown .submenu {
+  display: none;        /* hide by default */
+}
+
+.dropdown.open .submenu {
+  display: block;       /* show when dropdown has "open" class */
+}
+
+.arrow-icon {
+  transition: transform 0.2s;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+}
+
+.menu-label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+legend {
+  font-size: 1.2rem;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden; /* prevents page scroll */
+}
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 21px;
+  width: 4px;
+  height: 100%;
+  background: #dee2e6; /* vertical line */
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #6a5acd; /* dot color */
+  border-radius: 50%;
+}
+
+.timeline-time {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.timeline-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.timeline-actions {
+  margin-top: 5px;
+  display: flex;
+  gap: 5px;
+}
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgb(13 143 253) !important;
+}
+.bg-warning {
+  --bs-bg-opacity: 1;
+  background-color: rgb(246 204 80) !important;
+}
+.bg-success {
+  --bs-bg-opacity: 1;
+  background-color: rgb(76 237 64) !important;
+}
+.bg-danger {
+  --bs-bg-opacity: 1;
+  background-color: rgb(243 88 103) !important;
+}
+.dropdown.active > .menu-label {
+  background: #299dd4;
+  color: #fff;
+  font-weight: 600;
+}
+
