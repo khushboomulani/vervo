@@ -13,9 +13,21 @@ export default function Auth() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Login Data:", loginData);
-    alert("Logged in successfully!");
-    navigate("/dashboard/home");
+   
+    let role = "myspace";
+
+    if (loginData.email.includes("hr")) {
+      role = "HR";
+    }
+    console.log("Login Data:", loginData, "Role:", role);
+    if (role === "HR") {
+      alert("Logged in as HR");
+      navigate("/hr");          // HR module
+    } else {
+      alert("Logged in to MySpace");
+      navigate("/dashboard");   // MySpace module
+    }
+   
   };
 
   const handleSignup = (e) => {

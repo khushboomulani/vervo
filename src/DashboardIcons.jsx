@@ -70,10 +70,11 @@ const DashboardIcons = () => {
     </div>
 </div>
 <div className="col">
-    <div className="icon-card">
+<Link to="/login" className="text-decoration-none text-dark">  <div className="icon-card">
         <div className="icon-img">Su</div>
         <div className="icon-title">Peoples (HR)</div>
     </div>
+    </Link>
 </div>
 <div className="col">
 <Link to="/login" className="text-decoration-none text-dark">
